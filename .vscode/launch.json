@@ -1,0 +1,49 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}"
+        },
+        
+    {   //设置chrome启动网页文件
+        "name": "谷歌浏览器", 
+        "type": "chrome",
+        "request": "launch",
+        "url": "${file}",
+        "sourceMaps": true,
+        "webRoot": "${workspaceRoot}"
+    },
+    {
+        //设置直接启动node程序
+        "name": "node", 
+        "type": "node",
+        "request": "launch",
+        "program": "${file}", 
+        "stopOnEntry": false,
+        "args": [],
+        "cwd": "${workspaceRoot}",
+        "runtimeExecutable": null,
+        "runtimeArgs": [
+            "--nolazy"
+        ],
+        "env": {
+            "NODE_ENV": "development"
+        },
+        "console": "internalConsole",
+        "preLaunchTask": "",
+        "sourceMaps": false,
+    }
+]
+}
